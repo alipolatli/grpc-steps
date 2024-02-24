@@ -1,0 +1,31 @@
+syntax = "proto3";
+
+package hello.grpc;
+
+import "google/protobuf/timestamp.proto";
+
+message Skill {
+  string name = 1;
+  string description = 2;
+}
+
+message ProjectInvolvement {
+  string project_id = 1;
+  string role = 2;
+}
+
+message Employee {
+  string employee_id = 1;
+  string full_name = 2;
+  int32 age = 3;
+  string email = 4;
+  bytes profile_picture = 6;
+  map<string, Skill> skills = 5;
+  google.protobuf.Timestamp birth_date = 7;
+  repeated ProjectInvolvement project_involvements = 8;
+  oneof favorite_project {
+    string primary_favorite_project_id = 9;
+    string secondary_favorite_project_id = 10;
+
+  }
+}
