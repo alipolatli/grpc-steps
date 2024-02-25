@@ -21,4 +21,13 @@ public class GroomService : GroomS.GroomSBase
         return Task.FromResult(resp);
     }
 
+    public override async Task<NewsStreamStatus> SendNewsFlash(IAsyncStreamReader<NewsFlash> requestStream, ServerCallContext context)
+    {
+        while (await requestStream.MoveNext())
+        {
+            NewsFlash news = requestStream.Current;
+            Console.WriteLine($"News Flash: {news.NewsItem}");
+        }
+        return new NewsStreamStatus { Success = true };
+    }
 }
