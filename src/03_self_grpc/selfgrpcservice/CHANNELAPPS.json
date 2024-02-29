@@ -1,0 +1,109 @@
+{
+    "CHANNELAPPS": [
+        {
+            "id": "642de57d-260f-4725-8ab2-89ed8e1502fe",
+            "code": "TY",
+            "description": "Trendyol",
+            "keys": [
+                {
+                    "required": true,
+                    "key": "API_KEY"
+                },
+                {
+                    "required": true,
+                    "key": "API_SECRET_KEY"
+                }
+            ]
+        },
+        {
+            "id": "1edff24b-e35e-4089-9a30-c9fd224c1664",
+            "code": "AMZ",
+            "description": "Amazon",
+            "keys": [
+                {
+                    "required": true,
+                    "key": "API_KEY"
+                },
+                {
+                    "required": true,
+                    "key": "API_SECRET_KEY"
+                }
+            ]
+        },
+        {
+            "id": "d4110a82-feec-4efc-b255-23256a8178cc",
+            "code": "WS",
+            "description": "Web Site",
+            "keys": [
+                {
+                    "required": true,
+                    "key": "API_KEY"
+                },
+                {
+                    "required": true,
+                    "key": "API_SECRET_KEY"
+                }
+            ]
+        },
+        {
+            "id": "20cb3955-a289-4507-8648-a9319dd7b3e1",
+            "code": "HB",
+            "description": "Hepsiburada",
+            "keys": [
+                {
+                    "required": true,
+                    "key": "API_KEY"
+                },
+                {
+                    "required": true,
+                    "key": "API_SECRET_KEY"
+                }
+            ]
+        },
+        {
+            "id": "63b3dad2-fe30-4516-93fc-8b9f4296715a",
+            "code": "N11",
+            "description": "N11",
+            "keys": [
+                {
+                    "required": true,
+                    "key": "API_KEY"
+                },
+                {
+                    "required": true,
+                    "key": "API_SECRET_KEY"
+                }
+            ]
+        },
+        {
+            "id": "1f133b85-bcdb-4fdd-bdc9-0f31aca82d58",
+            "code": "PTT",
+            "description": "PTT AVM",
+            "keys": [
+                {
+                    "required": true,
+                    "key": "API_KEY"
+                },
+                {
+                    "required": true,
+                    "key": "API_SECRET_KEY"
+                }
+            ]
+        },
+        {
+            "id": "8d7529a0-67a5-4103-8c26-1c9893adf603",
+            "code": "ZLND",
+            "description": "Zalando",
+            "keys": [
+                {
+                    "required": true,
+                    "key": "API_KEY"
+                },
+                {
+                    "required": true,
+                    "key": "API_SECRET_KEY"
+                }
+            ]
+        }
+    ]
+}

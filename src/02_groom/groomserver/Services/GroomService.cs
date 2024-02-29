@@ -1,3 +1,4 @@
+using Google.Protobuf.WellKnownTypes;
 using Groom;
 using Grpc.Core;
 
@@ -26,8 +27,15 @@ public class GroomService : GroomS.GroomSBase
         while (await requestStream.MoveNext())
         {
             NewsFlash news = requestStream.Current;
-            Console.WriteLine($"News Flash: {news.NewsItem}");
+            _logger.LogInformation($"News Flash: {news.NewsItem}");
+            MessagesQueue.EnqueueQueue(news);
         }
         return new NewsStreamStatus { Success = true };
+    }
+
+    public override async Task StartMonitoring(Empty request, IServerStreamWriter<ReceivedMessage> responseStream, ServerCallContext context)
+    {
+        while (true)
+            if (MessagesQueue.QueueCount() > 0) await responseStream.WriteAsync(MessagesQueue.DequeueQueue());
     }
 }

@@ -7,11 +7,13 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <Protobuf Include="Protos\groom.proto" GrpcServices="Server" />
+    <Protobuf Include="Protos\presetdata.proto" GrpcServices="Server" />
+
   </ItemGroup>
 
   <ItemGroup>
-    <PackageReference Include="Grpc.AspNetCore" Version="2.61.0" />
+    <PackageReference Include="Grpc.AspNetCore" Version="2.57.0" />
   </ItemGroup>
+  
 
 </Project>

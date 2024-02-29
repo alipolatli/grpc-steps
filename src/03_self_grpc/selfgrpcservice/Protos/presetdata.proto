@@ -1,0 +1,24 @@
+syntax = "proto3";
+
+import "google/protobuf/empty.proto";
+
+package presetdata;
+message ChannelAppRoot {
+    repeated ChannelApp channel_apps = 1;
+}
+
+message ChannelApp {
+    string id = 1;
+    string code = 2;
+    string description = 3;
+    repeated ChannelAppKey keys = 4;
+}
+
+message ChannelAppKey {
+    bool required = 1;
+    string key = 2;
+}
+
+service PresetDataS {
+    rpc GetChannelApps(google.protobuf.Empty) returns (ChannelAppRoot);
+}
